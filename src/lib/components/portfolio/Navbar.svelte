@@ -7,10 +7,20 @@
 	import ModeToggle from './ModeToggle.svelte';
 	import Button from '$lib/components/ui/button/button.svelte';
 	import { mode } from 'mode-watcher';
+	import { page } from '$app/stores';
+	
 	$: theme = $mode;
+	$: currentPath = $page.url.pathname;
 
 	function handleNavClick(event: MouseEvent, href: string) {
 		if (href.startsWith('#')) {
+			// If we're not on the home page, navigate to home page with hash
+			if (currentPath !== '/') {
+				window.location.href = '/' + href;
+				return;
+			}
+			
+			// If we're on home page, smooth scroll to section
 			event.preventDefault();
 			const element = document.querySelector(href);
 			if (element) {

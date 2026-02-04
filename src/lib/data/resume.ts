@@ -1,4 +1,4 @@
-import { CodeIcon, Github, Globe, HomeIcon, Youtube, Mail, MapPin, Calendar } from 'lucide-svelte';
+import { CodeIcon, Github, Globe, HomeIcon, Youtube, Mail, MapPin, Calendar, Server } from 'lucide-svelte';
 // Navbar Icons
 import GithubSvg from '$lib/imgs/github.svg';
 import GithubDarkSvg from '$lib/imgs/github-dark.svg';
@@ -13,6 +13,10 @@ import UNKImg from '$lib/imgs/UNK.png';
 import ScoreScrapeImg from '$lib/imgs/ScoreScrape.png';
 import PromptyImg from '$lib/imgs/Prompty.png';
 import SaintoftheDayImg from '$lib/imgs/SaintOfTheDay.png';
+
+import RackImg from '$lib/imgs/RackImg.png';
+import RackDiagram from '$lib/imgs/RackDiagram.png';
+
 
 export const DATA = {
 	name: 'Broomfield Max',
@@ -57,6 +61,7 @@ export const DATA = {
 		{ href: '/', icon: HomeIcon, label: 'Home' },
 		// { href: '/blog', icon: NotebookIcon, label: 'Blog' },
 		{ href: '#projects', icon: CodeIcon, label: 'Projects' },
+		{ href: '#homelab', icon: Server, label: 'Homelab' },
 		{ href: '/contact', icon: Mail, label: 'Contact' }
 	],
 	contact: {
@@ -246,6 +251,31 @@ export const DATA = {
 			video: ''
 		}
 	],
+	homelab: {
+		title: 'My Homelab Setup',
+		description: 'An overview of my homelab. Drag the slider to compare the rack schematic with the actual setup.',
+		schematicImage: RackDiagram,
+		photoImage: RackImg,
+		specs: [
+			{
+				label: 'Hardware',
+				value: '56 Cores, 276GB RAM total'
+			},
+			{
+				label: 'Virtualization',
+				value: '5 Proxmox nodes'
+			},
+			{
+				label: 'Storage',
+				value: '18TB ZFS Array'
+			},
+			{
+				label: 'Networking',
+				value: 'Cisco and Juniper'
+			}
+		],
+		details: 'My homelab is a space where I experiment with various technologies, services, and things i\'m imtrested in. I\'m able to replicate real-world enviroments; and learn new things in the process.'
+	},
 	funstuff: [
 		{
 			title: 'Hack Western 5',

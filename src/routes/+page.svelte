@@ -3,6 +3,7 @@
 	import FunStuffCard from '$lib/components/portfolio/FunStuffCard.svelte';
 	import ProjectCard from '$lib/components/portfolio/ProjectCard.svelte';
 	import ResumeCard from '$lib/components/portfolio/ResumeCard.svelte';
+	import HomelabDiff from '$lib/components/portfolio/HomelabDiff.svelte';
 	import * as Avatar from '$lib/components/ui/avatar';
 	import Badge from '$lib/components/ui/badge/badge.svelte';
 	import ImageModal from '$lib/components/ui/dialog/ImageModal.svelte';
@@ -206,6 +207,38 @@
 					</BlurFade>
 				{/each}
 			</div>
+		</div>
+	</section>
+	<section id="homelab">
+		<div class="w-full space-y-12 py-12">
+			<BlurFade delay={BLUR_FADE_DELAY}>
+				<div class="flex flex-col items-center justify-center space-y-4 text-center">
+					<div class="space-y-2">
+						<div class="inline-block rounded-lg bg-foreground px-3 py-1 text-sm text-background">
+							Homelab
+						</div>
+						<h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">
+							My Infrastructure
+						</h2>
+						<p
+							class="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
+						>
+							{DATA.homelab.description}
+						</p>
+					</div>
+				</div>
+			</BlurFade>
+			<BlurFade delay={BLUR_FADE_DELAY * 1.5}>
+				<div class="mx-auto max-w-[1200px] px-4">
+					<HomelabDiff
+						schematicImage={DATA.homelab.schematicImage}
+						photoImage={DATA.homelab.photoImage}
+						title={DATA.homelab.title}
+						description={DATA.homelab.details}
+						specs={DATA.homelab.specs}
+					/>
+				</div>
+			</BlurFade>
 		</div>
 	</section>
 	<!-- <section id="fun-stuff">
