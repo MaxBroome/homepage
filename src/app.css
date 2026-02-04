@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--background: 0 0% 100%;
+		--foreground: 240 10% 3.9%;
+		--card: 0 0% 100%;
+		--card-foreground: 240 10% 3.9%;
+		--popover: 0 0% 100%;
+		--popover-foreground: 240 10% 3.9%;
+		--primary: 240 5.9% 10%;
+		--primary-foreground: 0 0% 98%;
+		--secondary: 240 4.8% 95.9%;
+		--secondary-foreground: 240 5.9% 10%;
+		--muted: 240 4.8% 95.9%;
+		--muted-foreground: 240 3.8% 46.1%;
+		--accent: 240 4.8% 95.9%;
+		--accent-foreground: 240 5.9% 10%;
+		--destructive: 0 72.22% 50.59%;
+		--destructive-foreground: 0 0% 98%;
+		--border: 240 5.9% 90%;
+		--input: 240 5.9% 90%;
+		--ring: 240 5.9% 10%;
+		--radius: 0.75rem;
+	}
+	.dark {
+		--background: 240 10% 3.9%;
+		--foreground: 0 0% 98%;
+		--card: 240 10% 3.9%;
+		--card-foreground: 0 0% 98%;
+		--popover: 240 10% 3.9%;
+		--popover-foreground: 0 0% 98%;
+		--primary: 0 0% 98%;
+		--primary-foreground: 240 5.9% 10%;
+		--secondary: 240 3.7% 15.9%;
+		--secondary-foreground: 0 0% 98%;
+		--muted: 240 3.7% 15.9%;
+		--muted-foreground: 240 5% 64.9%;
+		--accent: 240 3.7% 15.9%;
+		--accent-foreground: 0 0% 98%;
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: 0 0% 98%;
+		--border: 240 3.7% 15.9%;
+		--input: 240 3.7% 15.9%;
+		--ring: 240 4.9% 83.9%;
+	}
+}
+
+@layer base {
+	* {
+		@apply border-border;
+	}
+	body {
+		@apply bg-background text-foreground;
+	}
+	html {
+		scroll-behavior: smooth;
+	}
+}
+
+
+/* Contact page stuff */
+.diagram-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.diagram-grid {
+	display: inline-grid;
+	grid-template-columns: auto auto auto;
+	gap: 0;
+	align-items: center;
+	justify-items: stretch;
+}
+
+/* labels */
+.label-me,
+.label-website,
+.label-email {
+	font-size: 0.75rem;
+	font-weight: 600;
+	color: hsl(var(--muted-foreground));
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	white-space: nowrap;
+	padding: 4px 0;
+	text-align: center;
+}
+
+/* brackets */
+.bracket-me-top,
+.bracket-website-top,
+.bracket-email-bottom {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	color: hsl(var(--foreground));
+	font-size: 1.25rem;
+	line-height: 1;
+	padding: 4px 0;
+}
+
+.bracket-me-top .line,
+.bracket-website-top .line,
+.bracket-email-bottom .line {
+	flex: 1;
+	height: 1px;
+	background: currentColor;
+}
+
+/* Email link wrapper */
+.email-link {
+	display: contents;
+	text-decoration: none;
+}
+
+.email-link:hover .email-username,
+.email-link:hover .email-at,
+.email-link:hover .email-domain {
+	color: hsl(217, 91%, 60%);
+	background: hsl(var(--muted) / 0.4);
+}
+
+/* Email parts */
+.email-username,
+.email-at,
+.email-domain {
+	font-family: inherit;
+	font-size: clamp(1.5rem, 4vw, 2.75rem);
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	color: hsl(var(--foreground));
+	transition: all 0.2s ease;
+	padding: 8px 4px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.email-copied .email-username,
+.email-copied .email-at,
+.email-copied .email-domain {
+	animation: emailFlash 0.6s ease-out;
+}
+
+@keyframes emailFlash {
+	0% {
+		color: hsl(217, 91%, 60%);
+		background: hsl(var(--muted) / 0.4);
+	}
+	100% {
+		color: hsl(var(--foreground));
+		background: transparent;
+	}
+}
+
+@media (max-width: 640px) {
+	.email-username,
+	.email-at,
+	.email-domain {
+		font-size: 1.125rem;
+		padding: 6px 2px;
+	}
+
+	.label-me,
+	.label-website,
+	.label-email {
+		font-size: 0.625rem;
+	}
+
+	.bracket-me-top,
+	.bracket-website-top,
+	.bracket-email-bottom {
+		font-size: 1rem;
+	}
+}

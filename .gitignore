@@ -1,0 +1,8 @@
+node_modules/
+.vscode
+.svelte-kit
+.claude
+.env
+*.env
+.DS_Store
+tmp
