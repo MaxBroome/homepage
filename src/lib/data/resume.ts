@@ -10,6 +10,10 @@ import AquinasImg from '$lib/imgs/Aquinas.png';
 import GarminImg from '$lib/imgs/Garmin.webp';
 import UNKImg from '$lib/imgs/UNK.png';
 
+import ScoreScrapeImg from '$lib/imgs/ScoreScrape.png';
+import PromptyImg from '$lib/imgs/Prompty.png';
+import SaintoftheDayImg from '$lib/imgs/SaintOfTheDay.png';
+
 export const DATA = {
 	name: 'Broomfield Max',
 	initials: 'MB',
@@ -159,7 +163,7 @@ export const DATA = {
 					// icon: <Icons.github className="size-3" />,
 				}
 			],
-			image: '/src/lib/imgs/ScoreScrape.png',
+			image: ScoreScrapeImg,
 			video: ''
 		},
 		{
@@ -206,7 +210,7 @@ export const DATA = {
 					icon: Github
 				}
 			],
-			image: '/src/lib/imgs/Prompty.png',
+			image: PromptyImg,
 			video: ''
 		},
 		{
@@ -238,7 +242,7 @@ export const DATA = {
 					// icon: <Icons.github className="size-3" />,
 				}
 			],
-			image: '/src/lib/imgs/SaintOfTheDay.png',
+			image: SaintoftheDayImg,
 			video: ''
 		}
 	],
