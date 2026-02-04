@@ -1,0 +1,5 @@
+# AI.txt - Directives for AI crawlers and agents
+# See https://site.spawning.ai/ai-txt for more information
+
+User-agent: *
+Disallow: /contact
