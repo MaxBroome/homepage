@@ -95,7 +95,7 @@ export const DATA = {
 					start: 'May 2024',
 					end: 'August 2025',
 					description:
-						'Led infrastructure modernization initiatives including network architecture redesign, server virtualization, and disaster recovery. Managed enterprise systems including Active Directory, virtulization clusters, network and security infrastructure. Used technologies such as DNS, STP, SIP, and 802.1x in projects.'
+						'Led infrastructure modernization initiatives including network architecture redesign, server virtualization, and disaster recovery. Managed enterprise systems including Active Directory, virtulization clusters, network and security infrastructure. Used technologies such as DNS, STP, SIP, and 802.1x in various projects.'
 				},
 				{
 					title: 'Information Technology Staff',
