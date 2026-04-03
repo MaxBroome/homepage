@@ -25,7 +25,7 @@ export const DATA = {
 	img: 'https://avatars.githubusercontent.com/u/56701581',
 	location: 'Overland Park, KS',
 	locationLink: 'https://www.google.com/maps/place/Overland+Park,+KS',
-	birthday: new Date('2006-05-16T06:13:00'),
+	birthday: new Date('2006-05-16T06:13:00-05:00'),
 	description:
 		'Aspiring Network Engineer. I love building things and helping people. Currently looking for work.',
 	icons: {
