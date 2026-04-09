@@ -93,12 +93,12 @@ export const DATA = {
 			title: 'Systems Infrastructure Engineer',
 			logoUrl: AquinasImg,
 			start: 'May 2022',
-			end: 'August 2025',
+			end: 'August 2026',
 			positions: [
 				{
 					title: 'Systems Infrastructure Engineer',
 					start: 'May 2024',
-					end: 'August 2025',
+					end: 'August 2026',
 					description:
 						'Led infrastructure modernization initiatives including network architecture redesign, server virtualization, and disaster recovery. Managed enterprise systems including Active Directory, virtulization clusters, network and security infrastructure. Used technologies such as DNS, STP, SIP, and 802.1x in various projects.'
 				},
