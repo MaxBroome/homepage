@@ -1,4 +1,4 @@
-import { CodeIcon, Github, Globe, HomeIcon, Youtube, Mail, MapPin, Calendar, Server } from 'lucide-svelte';
+import { CodeIcon, Github, Globe, HomeIcon, Youtube, Mail, MapPin, Calendar, Server, NotebookIcon } from 'lucide-svelte';
 // Navbar Icons
 import GithubSvg from '$lib/imgs/github.svg';
 import GithubDarkSvg from '$lib/imgs/github-dark.svg';
@@ -45,7 +45,7 @@ export const DATA = {
 		'IPv4/IPv6',
 		'VLANs',
 		'Active Directory',
-		'WireGaurd',
+		'WireGuard',
 		'Linux',
 		'Proxmox',
 		'Git',
@@ -59,9 +59,9 @@ export const DATA = {
 	],
 	navbar: [
 		{ href: '/', icon: HomeIcon, label: 'Home' },
-		// { href: '/blog', icon: NotebookIcon, label: 'Blog' },
 		{ href: '#projects', icon: CodeIcon, label: 'Projects' },
 		{ href: '#homelab', icon: Server, label: 'Homelab' },
+		{ href: '/blog', icon: NotebookIcon, label: 'Blog' },
 		{ href: '/contact', icon: Mail, label: 'Contact' }
 	],
 	contact: {
